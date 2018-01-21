@@ -7,7 +7,7 @@ RUN	apk add --update curl && \
 ADD Caddyfile /
 
 RUN mkdir /root/caddy && \
-	curl -sL -o /root/caddy/caddy.tgz "https://caddyserver.com/download/build?os=linux&arch=amd64" && \
+	curl -sL -o /root/caddy/caddy.tgz "https://caddyserver.com/download/linux/amd64?license=" && \
 	tar -xf /root/caddy/caddy.tgz -C /root/caddy && \
 	mv /root/caddy/caddy /usr/bin/caddy && \
 	chmod 755 /usr/bin/caddy && \
