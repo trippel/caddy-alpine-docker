@@ -1,0 +1,11 @@
+# default reverse proxy definition
+# copy as host definition
+# Caddyfile definition applies
+https://host {
+  gzip
+  tls mail
+  proxy / http://host:port{
+    transparent
+    websocket
+  }
+}
